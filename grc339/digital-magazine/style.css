@@ -1,0 +1,215 @@
+/*CSS document*/
+
+html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit;}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+html, body {
+    background-color: #fcf2de;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+h1 {
+    width: 15em;
+    margin-left: 0;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+h2{
+    font-family: "swiss-721-bt-rounded", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.75em;
+    color: #d39076;
+    padding-top: 0;
+    padding-bottom: .25em;
+}
+
+p{
+    font-family: arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    padding-top: .25em;
+    padding-bottom: 2em;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav a {
+    color: #d49e46;
+    font-family: "swiss-721-bt-rounded", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+nav ul li {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    list-style: none;
+    color: #d39076;
+}
+
+nav ul {
+    margin-bottom: .25em;
+}
+
+.secondarystory h2 {
+    font-size: 2em;
+}
+
+.tertiarystory h2 {
+    font-size: 1.5em;
+    border-top: 1px solid #d39076; 
+    padding-top: .5em;
+}
+
+.container {
+    padding: 1em;
+}
+
+@media screen and (min-width: 40em){
+
+    nav ul li {
+        display: inline;
+        padding-left: 0;
+        padding-right: 1em;
+    }
+
+    div {
+        max-width: 40em;
+        margin: auto;
+    }
+}
+
+aside {
+    background-color: #fbe6bf;
+    padding: .5em;
+}
+
+aside h2 {
+    font-size: .5em;
+}
+
+figcaption {
+    font-family: sans-serif;
+    font-style: italic;
+    color: rgb(105, 105, 105);
+    margin-top: .5em;
+    margin-bottom: 1em;
+}
+
+footer p {
+    color: rgb(255, 255, 255);
+    padding-top: 1.5em;
+    padding-left: 1em;
+}
+
+footer {
+    background-color: #315651;
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 60em) { 
+
+    div.home-container {
+        max-width: 80em;
+        padding: 0 1em;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-gap: 1em;
+    }
+
+    div.container {
+        max-width: 60em;
+        padding: 0 1em;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-gap: 1em;
+    }
+
+    header, footer {
+        grid-column: 1/3;
+    }
+
+    div.home-container, main {
+        display: grid;
+        grid-template-columns: repeat (3, 1fr);
+        grid-gap: 1em;
+    }
+
+    div.home-container aside {
+        background: none;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    div.container aside {
+        margin-top: 0;
+    }
+
+    section.mainstory {
+        grid-column: 2/4;
+        grid-row: 1/3;
+        display: flex;
+    }
+
+    section.mainstory a {
+        flex: 1 0 12em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.mainstory a figure {
+        flex: 1 0 12em;
+        display: flex;
+    }
+
+    section.mainstory a figure img {
+        object-fit: cover;
+    }
+
+    section.mainstory a h2 {
+        flex: 0 0 1em;
+    }
+
+    section.mainstory a p {
+        flex: 0 0 4em;
+    }
+
+    section.secondary {
+        display: flex;
+    }
+
+    section.secondary a {
+        flex: 1 0 12em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.secondary a figure {
+        flex: 1 0 12em;
+        display: flex;
+    }
+
+    section.secondary a figure img {
+        object-fit: cover;
+    }
+
+    section.secondary a h2 {
+        flex: 0 0 1em;
+    }
+
+    section.secondary a p {
+        flex: 0 0 4em;
+    }
+
+}
