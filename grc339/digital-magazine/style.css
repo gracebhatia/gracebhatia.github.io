@@ -31,12 +31,13 @@ h2{
 }
 
 p{
-    font-family: arial, sans-serif;
+    font-family: georgia;
     font-style: normal;
     font-weight: 400;
     color: rgb(0, 0, 0);
     padding-top: .25em;
     padding-bottom: 2em;
+    font-size: 1.2em;
 }
 
 a{
@@ -212,4 +213,164 @@ footer {
         flex: 0 0 4em;
     }
 
+}
+
+/* Photo Gallery Styling */
+.photogallery main {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: calc(67% + 3em);
+}
+
+.photogallery figure {
+    margin: 0;
+    width: calc(100% - 2em);
+    position: absolute;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.photogallery figure img {
+    width: 100%;
+}
+
+.photogallery figcaption {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 1em 0;
+    color: #888;
+}
+
+.photogallery input:nth-of-type(1):checked ~ main figure:nth-of-type(1),
+.photogallery input:nth-of-type(2):checked ~ main figure:nth-of-type(2),
+.photogallery input:nth-of-type(3):checked ~ main figure:nth-of-type(3),
+.photogallery input:nth-of-type(4):checked ~ main figure:nth-of-type(4),
+.photogallery input:nth-of-type(5):checked ~ main figure:nth-of-type(5),
+.photogallery input:nth-of-type(6):checked ~ main figure:nth-of-type(6),
+.photogallery input:nth-of-type(7):checked ~ main figure:nth-of-type(7),
+.photogallery input:nth-of-type(8):checked ~ main figure:nth-of-type(8) {
+    opacity: 1;
+}
+
+.photogallery nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: .2em;
+}
+
+.photogallery input {
+    display: none;
+}
+
+/* Newsletter Styling */
+
+.newsletter {
+  width: 100%;
+  max-width: 100em;
+}
+
+.newsletter form {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2em;  
+  background-color: #fff0d3;
+}
+
+.newsletter > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 40em) {
+  .newsletter {
+    width: 92%;
+  }
+}
+
+.newsletter h2 {
+    font-size: 2em;
+    padding-bottom: .5em;
+
+    color: #d39076;
+    font-family: "swiss-721-bt-rounded", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.newsletter h3 {
+    font-size: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+
+    color: #000000;
+    font-family: georgia;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.personal-info ul {
+    list-style-type: none;
+
+    font-family: georgia;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.personal-info ul li {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: .5em;
+}
+
+.personal-info ul li label {
+	flex: 0 0 10em;
+}
+
+.personal-info ul li input,
+.personal-info ul li select {
+  flex: 1em;             
+  max-width: 30em;     
+  box-sizing: border-box;
+}
+
+.genres ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+
+    font-family: georgia;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.genres ul li {
+    margin-bottom: .5em;
+    flex: 1 0 12em;
+}
+
+.method ul {
+    list-style-type: none;
+    padding-bottom: 1em;
+
+    font-family: georgia;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.method ul li {
+    padding: .2em;
+}
+
+button {
+    padding: 0.6em;
+    font-size: 1.2em;
+    cursor: pointer;
+
+    font-family: georgia;
+    font-style: normal;
+    font-weight: 400;
 }
